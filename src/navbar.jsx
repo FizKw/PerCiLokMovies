@@ -12,7 +12,7 @@ function ResponNav (){
       <Link to={`/PerCiLokMovies`}>
           <img src={logo} alt="Percilok Logo" className="w-10 rouded mr-4"/>
       </Link>
-        <a className="btn btn-ghost normal-case text-xl" href="/">Per<span className="text-primary">Movies</span></a>
+        <a className="btn btn-ghost normal-case text-xl" href="/PerCiLokMovies">Per<span className="text-primary">Movies</span></a>
       </div>
         
       <div className="dropdown dropdown-end flex-none">
