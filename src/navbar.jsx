@@ -9,7 +9,7 @@ function ResponNav (){
     
     <div className="navbar bg-base-300 flex-1">
       <div className="flex-1">
-      <Link to={`/`}>
+      <Link to={`/PerCiLokMovies`}>
           <img src={logo} alt="Percilok Logo" className="w-10 rouded mr-4"/>
       </Link>
         <a className="btn btn-ghost normal-case text-xl" href="/">Per<span className="text-primary">Movies</span></a>
@@ -21,7 +21,7 @@ function ResponNav (){
         </label>
         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
           <li>
-            <Link to={`/`}>Home Page</Link>
+            <Link to={`/PerCiLokMovies`}>Home Page</Link>
           </li>
           <li>
             <Link to={`/discover/topmovies`}>Discover</Link>
@@ -35,7 +35,7 @@ function ResponNav (){
       <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <Link to={`/`}>Home Page</Link>
+            <Link to={`/PerCiLokMovies`}>Home Page</Link>
           </li>
           <li>
             <Link to={`/discover/topmovies`}>Discover</Link>
