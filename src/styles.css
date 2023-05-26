@@ -1,0 +1,74 @@
+
+
+
+
+.MovieImg {
+    width: 200px;
+}
+
+.PopularImg{
+    width: 150px;
+}
+
+
+.card{
+    height: 100%;
+}
+
+
+
+.swiper{
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.moviePoster{
+    width: 75px;
+}
+
+.movieBackground{
+    width: 50%;
+}
+
+.swiper-slide{
+    height: calc((100% - 30px) / 2);
+}
+
+/*
+
+.input{
+    color: white;
+}
+
+.MovieWrapper{
+    color: white;
+}
+
+body{
+    color: black;
+    background-color: gainsboro;
+}
+
+#searchBox{
+    width: 500px;
+}
+
+.MovieWrapper{
+    background: white;
+    height: 100%;
+}
+
+.MovieImg {
+    width: 150px;
+}
+
+.MovieDate{
+    font-style: italic;
+}*/
