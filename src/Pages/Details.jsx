@@ -44,7 +44,7 @@ function MovieDetails() {
         if (video?.key) {
             return(
                 <div className="flex mx-auto m-4 justify-center">
-                    <ReactPlayer url={`${youtubeUrl}${video.key}`}/>
+                    <ReactPlayer url={`${youtubeUrl}${video.key}`} controls={true}/>
                 </div>
                 
             )
