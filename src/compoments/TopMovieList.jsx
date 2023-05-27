@@ -58,7 +58,7 @@ function TopMovieList () {
     
     
 
-    console.log({ topMovies: topMovies})
+    //console.log({ topMovies: topMovies})
     const Movies = () => {
         return topMovies.map((movie, index) => {
             return(
