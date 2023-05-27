@@ -4,6 +4,7 @@ import Navbar from "../navbar";
 import { fetchCast, fetchDetails, fetchVideo, fetchRecommendation } from "../api";
 import ReactPlayer from "react-player";
 import Footer from "../footer";
+import { Link } from "react-router-dom";
 
 function MovieDetails() {
     let item = useParams()
@@ -28,6 +29,7 @@ function MovieDetails() {
             fetchRecommendation(item.id).then((result) => {
                 setRecommendation(result)
             })
+            window.scrollTo(0, 0)
     }, [item.id])
     
     genres = details.genres;
@@ -72,7 +74,6 @@ function MovieDetails() {
                     <div>
                         <p><span>{list.name}</span> As <b><span>{list.character}</span></b></p>
                     </div>
-                    <br />
                 </div>
             )
         })
@@ -88,7 +89,13 @@ function MovieDetails() {
                     <div>
                         <p><span>{list.title}</span></p>
                     </div>
-                    <br />
+                    <div>
+                        <Link to={`/details/${list.id}`}>
+                            <button className="btn">
+                                Details
+                            </button>
+                        </Link>
+                    </div>
                 </div>
             )
         })
