@@ -15,7 +15,7 @@ function TopSearch() {
           key={movie.id}
         >
           <div className=" card  pb-4 relative">
-            <h3 className="MovieName text-xl group-hover:text-white  pb-4">
+            <h3 className="MovieName h-fit my-auto place-self-center align-middle text-xl group-hover:text-white  pb-4">
               {movie.title}
             </h3>
 
@@ -23,7 +23,7 @@ function TopSearch() {
               <img
                 src={`${process.env.REACT_APP_BASEIMGURL}/${movie.poster_path}`}
                 alt="img not found"
-                className="mx-auto align-center rounded-lg w-72 h-100 filter group-hover:brightness-50 duration-300 "
+                className="mx-auto align-center rounded-lg w-72 h-fit filter group-hover:brightness-50 duration-300 "
               />
             </figure>
             <div className="btn btn-base-100 absolute top-2/3 xl:inset-x-32 lg:inset-x-20 md:inset-x-28 sm:inset-x-64 xs:inset-x-28 opacity-0 group-hover:opacity-100 duration-300">
