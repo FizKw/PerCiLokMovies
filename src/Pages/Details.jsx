@@ -44,7 +44,7 @@ function MovieDetails() {
         if (video?.key) {
             return(
                 <div className="flex mx-auto m-4 justify-center">
-                    <ReactPlayer url={`${youtubeUrl}${video.key}`} controls={true}/>
+                    <ReactPlayer url={`${youtubeUrl}${video.key}`}/>
                 </div>
                 
             )
@@ -104,14 +104,14 @@ function MovieDetails() {
                     <h2>{details.overview}</h2>
                 </div>
                     <h1 className="text-2xl font-semibold m-2">Genres :</h1>
-                <div className="flex">
+                <div className="flex flex-wrap">
                     {genresList}
                 </div>
             </div>
 
             <br /><hr /><br /> 
 
-            <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-3 h-10">
+            <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1,pb-36 gap-3">
                 <div className="flex justify-center text-center p-4 bg-blue-900">
                     <svg aria-hidden="true" className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Rating star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                     <h1 className="ml-2 text-sm font-bold text-gray-900 dark:text-gray-300">{round(details.vote_average)}</h1>
@@ -129,9 +129,11 @@ function MovieDetails() {
 
             <br /><hr /><br />
 
-            <h1 className="text-center text-4xl font-semibold m-4">Cast</h1><br />
-            <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-4 text-center">
-            <CastList />
+            <div className="bottom-0">
+                <h1 className="text-center text-4xl font-semibold m-4">Cast</h1><br />
+                <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-4 text-center">
+                    <CastList />
+                </div>
             </div>
 
             <Footer />

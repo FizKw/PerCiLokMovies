@@ -53,10 +53,14 @@ function TopMovieList () {
                     <div className="self-center flex flex-row w-full p-3">
                         <div className="basis-10/12">
                             <Link to={`/details/${movie.id}`}>
+                                
                                 <h1 className="text-lg">{index+1}. {movie.title} ({movie.release_date})</h1>
                             </Link>
                         </div>
-                        <p className="basis-2/12">{movie.vote_average}</p>
+                        <div className="flex align-middle text-center">
+                            <svg aria-hidden="true" className="w-5 h-5 text-yellow-400 pt-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Rating star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                            <p className="basis-2/12">{movie.vote_average}</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -104,9 +108,9 @@ function TopMovieList () {
             return(
             <div key={list.id}>
                 <Link to={`/discover/${list.name}`}>
-                    <button type="button"  className="btn no-animation m-2 active:bg-white w-full" onClick={() => {genreClickHandler(list.id, list.name)}}>
-                        {list.name}
-                    </button>
+                        <button type="button"  className="btn no-animation m-2 active:bg-white w-full" onClick={() => {genreClickHandler(list.id, list.name)}}>
+                            {list.name}
+                        </button>
                 </Link>
             </div>
             )
@@ -118,7 +122,12 @@ function TopMovieList () {
             <div className="w-3/4 p-2">
                 <h1 className="p-2 ml-5 font-bold text-xl">{header} : </h1>
                 <Movies />
-                <button type="button" className={`btn m-2 ${isMax ? 'hidden' : ''}`} onClick={() => {showMoreClickHandler()}} >Show More</button>
+                <button type="button" className={`btn m-6 btn-xs sm:btn-sm md:btn-md lg:btn-lg btn-ghost ${isMax ? 'hidden' : ''}`} onClick={() => {showMoreClickHandler()}} >
+                        Show More
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                             <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
+                        </svg>
+                </button>
             </div>
             <div className="w-1/4 p-2">
                 <h1 className="p-2 ml-1 font-bold text-xl">Filter by :</h1>

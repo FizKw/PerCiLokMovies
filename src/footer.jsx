@@ -3,11 +3,11 @@ import logo from './compoments/image/percilok.png'
 
 function Footer(){
   return(
-    <footer className="footer footer-center p-3 bg-blue-900 text-primary-content text-center">
+    <footer className="footer footer-center  py-5 bg-slate-800 text-primary-content text-center bottom-0 right-0">
       <div>
         <img src={logo} alt="Percilok Logo" className="w-10 rouded mr-4 flex justify-center"/>
-        <p className="font-bold text-gray-300">PerCiLok Ltd.<br/>Bringing Expectations to Life since 2022</p> 
-        <p className="text-gray-300">Copyright © 2023 - All right reserved</p>
+        <p className="font-bold text-gray-300 text-xl">PerCiLok Ltd.<br/>Bringing Expectations to Life since 2022</p> 
+        <p className="text-gray-300 text-lg">Copyright © 2023 - All right reserved</p>
       </div> 
     </footer>
   )
