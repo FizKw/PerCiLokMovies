@@ -23,7 +23,7 @@ function Popular() {
       setUpcoming(result);
     });
   }, []);
-  console.log({ popularMovies: popularMovies });
+  //console.log({ popularMovies: popularMovies });
   return (
     <div>
       <div className="bg-base-300 p-3 rounded-lg mb-4">
