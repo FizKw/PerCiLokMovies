@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import Navbar from "../navbar";
-import { fetchCast, fetchDetails, fetchVideo } from "../api";
+import { fetchCast, fetchDetails, fetchVideo, fetchRecommendation } from "../api";
 import ReactPlayer from "react-player";
 import Footer from "../footer";
 
@@ -10,6 +10,7 @@ function MovieDetails() {
     const [details, setDetails] = React.useState([])
     const [video, setVideo] = React.useState({})
     const [cast, setCast] = React.useState([])
+    const [recommendation, setRecommendation] =React.useState([])
     let genres = []
     const youtubeUrl = 'https://www.youtube.com/watch?v='
     
@@ -23,6 +24,9 @@ function MovieDetails() {
             })
             fetchCast(item.id).then((result) => {
                 setCast(result)
+            })
+            fetchRecommendation(item.id).then((result) => {
+                setRecommendation(result)
             })
     }, [item.id])
     
@@ -63,10 +67,26 @@ function MovieDetails() {
             return(
                 <div>
                     <div className="text-center">
-                        <img src={`${process.env.REACT_APP_BASEIMGURL}/${list.profile_path}`} alt="img not found" className="mx-auto rounded-md w-48"/>
+                        <img src={`${process.env.REACT_APP_BASEIMGURL}/${list.profile_path}`} alt="img not found" className="mx-auto rounded-full w-48"/>
                     </div><br />
                     <div>
                         <p><span>{list.name}</span> As <b><span>{list.character}</span></b></p>
+                    </div>
+                    <br />
+                </div>
+            )
+        })
+    }
+
+    const Recommendation = () => {
+        return recommendation.slice(0, 4).map((list) => {
+            return(
+                <div>
+                    <div className="text-center">
+                        <img src={`${process.env.REACT_APP_BASEIMGURL}/${list.poster_path}`} alt="img not found" className="mx-auto rounded-md w-48"/>
+                    </div><br />
+                    <div>
+                        <p><span>{list.title}</span></p>
                     </div>
                     <br />
                 </div>
@@ -89,6 +109,9 @@ function MovieDetails() {
     //console.log({cast:cast})
     //console.log({video: video})
     //console.log({details: details})
+
+    
+
     return(
         <div className="container mx-auto p-2">
             <Navbar />
@@ -129,12 +152,17 @@ function MovieDetails() {
 
             <br /><hr /><br />
 
-            <div className="bottom-0">
+            <div>
                 <h1 className="text-center text-4xl font-semibold m-4">Cast</h1><br />
                 <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-4 text-center">
                     <CastList />
                 </div>
             </div>
+
+            <h1 className="text-center text-4xl font-semibold m-4">Recommendations</h1><br />
+                <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-4 text-center h-full">
+                    <Recommendation />
+                </div>
 
             <Footer />
         </div>

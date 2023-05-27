@@ -23,7 +23,7 @@ function AboutUs(){
                   <a href="https://www.instagram.com/marli.no">
                   <img
                     src={Instagram}
-                    alt="Button Image"
+                    alt="Not Found"
                     className="w-10 h-10 rounded-md"
                   />
                   </a>
@@ -41,7 +41,7 @@ function AboutUs(){
                   <a href="https://www.instagram.com/haaa_kw">
                   <img
                     src={Instagram}
-                    alt="Button Image"
+                    alt="Not Found"
                     className="w-10 h-10 rounded-md"
                   />                  
                   </a>
@@ -59,7 +59,7 @@ function AboutUs(){
                   <a href="https://www.instagram.com/adityastpn_">
                   <img
                     src={Instagram}
-                    alt="Button Image"
+                    alt="Not Found"
                     className="w-10 h-10 rounded-md"
                   />
                   </a>
@@ -77,7 +77,7 @@ function AboutUs(){
                   <a href="https://www.instagram.com/salinggih_">
                   <img
                     src={Instagram}
-                    alt="Button Image"
+                    alt="Not Found"
                     className="w-10 h-10 rounded-md"
                   />
                   </a>

@@ -6,6 +6,9 @@ module.exports = {
       screens: {
         xs: "360px",
       },
+      spacing: {
+        100: "26rem",
+      },
     },
   },
   plugins: [require("daisyui")],

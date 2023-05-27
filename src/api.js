@@ -47,3 +47,8 @@ export const fetchCast = async (movie_id) => {
     const getCast = await axios.get(`${baseUrl}/movie/${movie_id}/credits?language=en-US&api_key=${apiKey}`)
     return getCast.data.cast
 }
+
+export const fetchRecommendation = async (movie_id) => {
+    const getRecommendation = await axios.get(`${baseUrl}/movie/${movie_id}/recommendations?language=en-US&api_key=${apiKey}`)
+    return getRecommendation.data.results
+}

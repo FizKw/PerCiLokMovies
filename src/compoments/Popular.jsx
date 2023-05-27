@@ -2,7 +2,7 @@ import React from "react";
 import { getPopularList, getUpcoming } from "../api";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Link } from "react-router-dom";
-import '../styles.css'
+import "../styles.css";
 
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -59,7 +59,7 @@ function Popular() {
             clickable: true,
           }}
           navigation={false}
-          modules={[ Autoplay, FreeMode, Pagination, Navigation]}
+          modules={[Autoplay, FreeMode, Pagination, Navigation]}
           className="mySwiper"
         >
           {popularMovies.map((nowpopular) => {
@@ -74,18 +74,18 @@ function Popular() {
                     />
                   </figure>
                   <div className="opacity-0 group-hover:opacity-100 duration-300">
-                    <h2 className="justify-center text-neutral-50 font-bold text-2xl sm:text-2xl xs:text-base absolute top-7 left-1/2 -translate-x-1/2 md:text-base">
+                    <h2 className="justify-center text-neutral-50 font-bold  xl:text-xl md:text-base sm:text-2xl xs:text-base absolute top-7 left-1/2 -translate-x-1/2 ">
                       {nowpopular.title}
                     </h2>
                     <Link to={`/details/${nowpopular.id}`}>
-                      <button className="btn btn-base-300 absolute top-2/3 inset-x-5 md:inset-x-7 sm:inset-x-20 md:text-sm md:top-2/3">
+                      <button className="btn btn-base-300 absolute top-2/3 xs:top-2/3 xs:-my-2 sm:my-0 lg:my-2  inset-x-5 xl:inset-x-5 lg:inset-x-4 md:inset-x-7 sm:inset-x-16 xs:text-xs sm:text-base md:text-xs xl:text-base btn-sm sm:btn-md lg:btn-sm xl:btn-md">
                         See Details
                       </button>
                     </Link>
                     <div className="flex absolute inset-x-0 bottom-5 md:bottom-1 sm:bottom-8 xs:bottom-1 justify-center">
                       <svg
                         aria-hidden="true"
-                        className="w-7 h-7 text-yellow-400"
+                        className="xs:w-6 sm:w-7 lg:w-6 lg:h-6 xs:h-6 sm:h-7 text-yellow-400"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
@@ -93,7 +93,7 @@ function Popular() {
                         <title>Rating star</title>
                         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
                       </svg>
-                      <p className="ml-1 text-lg text-white font-bold">
+                      <p className="ml-1 sm:text-lg xs:text-base lg:text-base text-white font-bold">
                         {nowpopular.vote_average}
                       </p>
                     </div>
@@ -127,7 +127,6 @@ function Popular() {
               spaceBetween: 20,
             },
           }}
-        
           loop={true}
           freeMode={true}
           autoplay={{
@@ -153,18 +152,18 @@ function Popular() {
                     />
                   </figure>
                   <div className="opacity-0 group-hover:opacity-100 duration-300">
-                    <h2 className="justify-center text-neutral-50 font-bold text-2xl sm:text-2xl xs:text-base absolute top-7 left-1/2 -translate-x-1/2 md:text-base">
+                    <h2 className="justify-center text-neutral-50 font-bold  xl:text-xl md:text-base sm:text-2xl xs:text-base absolute top-7 left-1/2 -translate-x-1/2 ">
                       {nowpopular.title}
                     </h2>
                     <Link to={`/details/${nowpopular.id}`}>
-                      <button className="btn btn-base-300 absolute top-2/3 inset-x-5 md:inset-x-7 sm:inset-x-20 md:text-sm md:top-2/3">
+                      <button className="btn btn-base-300 absolute top-2/3 xs:top-2/3 xs:-my-2 sm:my-0 lg:my-2  inset-x-5 xl:inset-x-5 lg:inset-x-4 md:inset-x-7 sm:inset-x-16 xs:text-xs sm:text-base md:text-xs xl:text-base btn-sm sm:btn-md lg:btn-sm xl:btn-md">
                         See Details
                       </button>
                     </Link>
                     <div className="flex absolute inset-x-0 bottom-5 md:bottom-1 sm:bottom-8 xs:bottom-1 justify-center">
                       <svg
                         aria-hidden="true"
-                        className="w-7 h-7 text-yellow-400"
+                        className="xs:w-6 sm:w-7 lg:w-6 lg:h-6 xs:h-6 sm:h-7 text-yellow-400"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
@@ -172,7 +171,7 @@ function Popular() {
                         <title>Rating star</title>
                         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
                       </svg>
-                      <p className="ml-1 text-lg text-white font-bold">
+                      <p className="ml-1 sm:text-lg xs:text-base lg:text-base text-white font-bold">
                         {nowpopular.vote_average}
                       </p>
                     </div>
