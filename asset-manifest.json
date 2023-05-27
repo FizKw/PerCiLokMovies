@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/PerCiLokMovies/static/css/main.61d035d3.css",
+    "main.css": "/PerCiLokMovies/static/css/main.cf26ab61.css",
     "main.js": "/PerCiLokMovies/static/js/main.c7aa422a.js",
     "static/media/pinceng.jpg": "/PerCiLokMovies/static/media/pinceng.bcf0f15067c1579c7e97.jpg",
     "static/media/ig.png": "/PerCiLokMovies/static/media/ig.163f24529b56b3ebdddc.png",
@@ -9,11 +9,11 @@
     "static/media/epeng.jpg": "/PerCiLokMovies/static/media/epeng.824339200744f67d65d2.jpg",
     "static/media/percilok.png": "/PerCiLokMovies/static/media/percilok.c74a8afa9a7b004a500f.png",
     "index.html": "/PerCiLokMovies/index.html",
-    "main.61d035d3.css.map": "/PerCiLokMovies/static/css/main.61d035d3.css.map",
+    "main.cf26ab61.css.map": "/PerCiLokMovies/static/css/main.cf26ab61.css.map",
     "main.c7aa422a.js.map": "/PerCiLokMovies/static/js/main.c7aa422a.js.map"
   },
   "entrypoints": [
-    "static/css/main.61d035d3.css",
+    "static/css/main.cf26ab61.css",
     "static/js/main.c7aa422a.js"
   ]
 }
