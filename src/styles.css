@@ -29,3 +29,7 @@
 .swiper-slide {
   height: calc((100% - 30px) / 2);
 }
+
+body{
+  font-family: 'Poppins', sans-serif;
+}
