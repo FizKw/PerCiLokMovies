@@ -12,7 +12,7 @@ function TopMovieList () {
     const [isTop, setIsTop] = React.useState(true)
     const [idGenre, setIdGenre] = React.useState()
     const [isMax, setIsMax] = React.useState(false)
-    
+    const [visible, setVisible] = React.useState(false)
     
     
     React.useEffect(() => {
@@ -26,6 +26,22 @@ function TopMovieList () {
         page = 1
     }, [])
 
+    const toggleVisible = () => {
+        const scrolled = document.documentElement.scrollTop;
+        if (scrolled > 200) {
+            setVisible(true)
+        }
+        else if (scrolled <= 200) {
+            setVisible(false)
+        }
+    }
+    const scrollToTop = () => {
+        window.scrollTo({
+            top:0, 
+            behavior: 'smooth'
+        });
+    }
+    window.addEventListener('scroll', toggleVisible)
 
     function topClickHandler(){
         
@@ -39,6 +55,7 @@ function TopMovieList () {
         setIsMax(false)
     }
 
+    
     
 
     console.log({ topMovies: topMovies})
@@ -116,9 +133,9 @@ function TopMovieList () {
             )
         })
     }
-
+    
     return(
-        <div className="flex">
+        <div className="flex relative">
             <div className="w-3/4 p-2">
                 <h1 className="p-2 ml-5 font-bold text-xl">{header} : </h1>
                 <Movies />
@@ -128,6 +145,9 @@ function TopMovieList () {
                              <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
                         </svg>
                 </button>
+
+
+
             </div>
             <div className="w-1/4 p-2">
                 <h1 className="p-2 ml-1 font-bold text-xl">Filter by :</h1>
@@ -139,12 +159,19 @@ function TopMovieList () {
                             Top 100 Movies {isMax}
                         </button>
                     </Link>
+                    
                 </div>
             </div>
+            <button type="button" className="btn m-6 btn-circle fixed bottom-0 right-0 animate-bounce" onClick={scrollToTop} style={{display: visible ? '' : 'none'}}>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18" />
+                </svg>
+            </button>
         </div>
     )
       
 }
+// style={{display: visible ? '' : 'none'}}
 
 export default TopMovieList
 

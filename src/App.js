@@ -9,7 +9,7 @@ const App = () => {
   return (
     <main>
       <Routes>
-        <Route path="/PerCiLokMovies" Component={Home} exact/>
+        <Route path="/PerCiLokMovies" Component={Home}/>
         <Route path="/discover/:genre" Component={Discover}/>
         <Route path="/aboutus" Component={AboutUs}/>
         <Route path="/details/:id" Component={Details}/>

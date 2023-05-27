@@ -36,7 +36,7 @@ function AboutUs(){
               </figure>
               <div className="card-body items-center text-center">
                 <h2 className="card-title">Hafizh Kumara Widyadhana</h2>
-                <p>Terkadang tidak perlu lari dari kenyataan, jogging juga gapapa kok</p>
+                <p>Rahasia itu harusnya dirahasiakan bukan di klik</p>
                 <div className="card-actions mt-auto">
                   <a href="https://www.instagram.com/haaa_kw">
                   <img
