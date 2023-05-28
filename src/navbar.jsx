@@ -10,12 +10,12 @@ function ResponNav() {
           <img src={logo} alt="Percilok Logo" className="pl-4 w-14 rouded " />
         </Link>
         <Link to={`/PerCiLokMovies`}>
-          <a
+          <div
             className="hover:bg-none normal-case text-xl font-bold pl-3"
             href="/"
           >
             Per<span className="text-primary">Movies</span>
-          </a>
+          </div>
         </Link>
       </div>
 

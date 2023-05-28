@@ -6,6 +6,7 @@ import Epeng from "../compoments/image/epeng.jpg";
 import Nggih from "../compoments/image/nggih.jpg";
 import Footer from "../footer";
 import Instagram from "../compoments/image/ig.png";
+import { Link } from "react-router-dom";
 
 function AboutUs() {
   return (
@@ -47,7 +48,14 @@ function AboutUs() {
                 </figure>
                 <div className="card-body items-center text-center">
                   <h2 className="card-title">Hafizh Kumara Widyadhana</h2>
-                  <p>Rahasia itu harusnya dirahasiakan bukan di klik</p>
+                  <p>Rahasia itu harusnya dirahasiakan bukan di
+                    <Link to={`/nothing`}>
+                    <span>
+                    {` klik`}
+                    </span>
+                    </Link>
+                    </p>
+
                   <div className="card-actions mt-auto">
                     <a href="https://www.instagram.com/haaa_kw">
                       <img
