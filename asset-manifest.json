@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/PerCiLokMovies/static/css/main.1d96fefc.css",
-    "main.js": "/PerCiLokMovies/static/js/main.592fde04.js",
+    "main.css": "/PerCiLokMovies/static/css/main.b176e4b0.css",
+    "main.js": "/PerCiLokMovies/static/js/main.cd589dfa.js",
     "static/media/pinceng.jpg": "/PerCiLokMovies/static/media/pinceng.bcf0f15067c1579c7e97.jpg",
     "static/media/ig.png": "/PerCiLokMovies/static/media/ig.163f24529b56b3ebdddc.png",
     "static/media/hapis.jpg": "/PerCiLokMovies/static/media/hapis.9a42b0e30e4c3db7fa15.jpg",
@@ -9,11 +9,11 @@
     "static/media/epeng.jpg": "/PerCiLokMovies/static/media/epeng.824339200744f67d65d2.jpg",
     "static/media/percilok.png": "/PerCiLokMovies/static/media/percilok.c74a8afa9a7b004a500f.png",
     "index.html": "/PerCiLokMovies/index.html",
-    "main.1d96fefc.css.map": "/PerCiLokMovies/static/css/main.1d96fefc.css.map",
-    "main.592fde04.js.map": "/PerCiLokMovies/static/js/main.592fde04.js.map"
+    "main.b176e4b0.css.map": "/PerCiLokMovies/static/css/main.b176e4b0.css.map",
+    "main.cd589dfa.js.map": "/PerCiLokMovies/static/js/main.cd589dfa.js.map"
   },
   "entrypoints": [
-    "static/css/main.1d96fefc.css",
-    "static/js/main.592fde04.js"
+    "static/css/main.b176e4b0.css",
+    "static/js/main.cd589dfa.js"
   ]
 }
