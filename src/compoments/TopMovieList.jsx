@@ -12,7 +12,6 @@ function TopMovieList() {
   const [idGenre, setIdGenre] = React.useState();
   const [isMax, setIsMax] = React.useState(false);
   const [visible, setVisible] = React.useState(false);
-  let detailGenre = [];
 
 
 
