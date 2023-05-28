@@ -10,10 +10,10 @@ import Instagram from "../compoments/image/ig.png";
 function AboutUs() {
   return (
     <div>
-      <div className="container mx-auto p-2">
+      <div className="">
         <Navbar />
         <div className="flex flex-col min-h-screen">
-          <div className="flex-grow">
+          <div className="container flex-grow mx-auto">
             <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-20 justify-center p-5">
               <div className="card w-50 bg-base-100 shadow-xl glass">
                 <figure className="px-10 pt-10 hover:s">
