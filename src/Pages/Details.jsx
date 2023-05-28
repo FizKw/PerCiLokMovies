@@ -77,7 +77,7 @@ function MovieDetails() {
             <img
               src={`${process.env.REACT_APP_BASEIMGURL}/${list.profile_path}`}
               alt="img not found"
-              className="mx-auto rounded-full scale-75 transition duration-300 hover:scale-100 w-60 h-80"
+              className="mx-auto rounded-3xl md:rounded-full md:scale-75 transition duration-300 md:hover:scale-90 w-52 h-72 md:w-60 md:h-80"
             />
           </div>
           <br />
@@ -128,75 +128,77 @@ function MovieDetails() {
   //console.log({details: details})
 
   return (
-    <div className="container mx-auto p-2">
-      <Navbar />
+    <div>
+      <div className="container mx-auto mt-24 ">
+        <Navbar />
 
-      <h1 className="text-center text-6xl font-semibold m-8">
-        {details.title}
-      </h1>
-      <MoviePlayer />
-      <div>
-        <div className="text-center text-3xl font-semibold m-5">
-          <h1>Overview</h1>
+        <h1 className="text-center text-6xl font-semibold m-8">
+          {details.title}
+        </h1>
+        <MoviePlayer />
+        <div>
+          <div className="text-center text-3xl font-semibold m-5">
+            <h1>Overview</h1>
+          </div>
+          <div className="text-start sm:text-md md:text-lg lg:text-xl p-4">
+            <h2>{details.overview}</h2>
+          </div>
+          <h1 className="text-2xl font-semibold m-2">Genres :</h1>
+          <div className="flex flex-wrap">{genresList}</div>
         </div>
-        <div className="text-start sm:text-md md:text-lg lg:text-xl p-4">
-          <h2>{details.overview}</h2>
-        </div>
-        <h1 className="text-2xl font-semibold m-2">Genres :</h1>
-        <div className="flex flex-wrap">{genresList}</div>
-      </div>
 
-      <br />
-      <hr />
-      <br />
-
-      <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1,pb-36 gap-3">
-        <div className="flex justify-center text-center p-4 bg-blue-900">
-          <svg
-            aria-hidden="true"
-            className="w-5 h-5 text-yellow-400"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title>Rating star</title>
-            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-          </svg>
-          <h1 className="ml-2 text-sm font-bold text-gray-900 dark:text-gray-300">
-            {round(details.vote_average)}
-          </h1>
-        </div>
-        <div className="text-center p-3 bg-blue-900">
-          <h1>{`Revenue : ${USDollar.format(details.revenue)}`}</h1>
-        </div>
-        <div className="text-center p-3 bg-blue-900">
-          <h1>{details.runtime} Minutes</h1>
-        </div>
-        <div className="text-center p-3 bg-blue-900">
-          <h1>{`Budget : ${USDollar.format(details.budget)}`}</h1>
-        </div>
-      </div>
-
-      <br />
-      <hr />
-      <br />
-
-      <div>
-        <h1 className="text-center text-4xl font-semibold m-4">Cast</h1>
         <br />
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-4 text-center">
-          <CastList />
+        <hr />
+        <br />
+
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1,pb-36 gap-3">
+          <div className="flex justify-center text-center p-4 bg-blue-900">
+            <svg
+              aria-hidden="true"
+              className="w-5 h-5 text-yellow-400"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>Rating star</title>
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+            </svg>
+            <h1 className="ml-2 text-sm font-bold text-gray-900 dark:text-gray-300">
+              {round(details.vote_average)}
+            </h1>
+          </div>
+          <div className="text-center p-3 bg-blue-900">
+            <h1>{`Revenue : ${USDollar.format(details.revenue)}`}</h1>
+          </div>
+          <div className="text-center p-3 bg-blue-900">
+            <h1>{details.runtime} Minutes</h1>
+          </div>
+          <div className="text-center p-3 bg-blue-900">
+            <h1>{`Budget : ${USDollar.format(details.budget)}`}</h1>
+          </div>
+        </div>
+
+        <br />
+        <hr />
+        <br />
+
+        <div>
+          <h1 className="text-center text-4xl font-semibold m-4">Cast</h1>
+          <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-4 text-center">
+            <CastList />
+          </div>
+        </div>
+        <br />
+        <hr />
+
+        <h1 className="text-center text-4xl font-semibold p-3 pt-6">
+          Recommendations
+        </h1>
+        <br />
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-4 text-center h-full">
+          <Recommendation />
         </div>
       </div>
-
-      <h1 className="text-center text-4xl font-semibold p-4 pt-6">
-        Recommendations
-      </h1>
-      <br />
-      <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-4 text-center h-full">
-        <Recommendation />
-      </div>
-
       <Footer />
     </div>
   );

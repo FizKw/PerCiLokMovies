@@ -52,7 +52,7 @@ function Popular() {
           loop={true}
           freeMode={true}
           autoplay={{
-            delay: 2500,
+            delay: 4000,
             disableOnInteraction: false,
           }}
           pagination={{
@@ -130,7 +130,7 @@ function Popular() {
           loop={true}
           freeMode={true}
           autoplay={{
-            delay: 2500,
+            delay: 4000,
             disableOnInteraction: false,
           }}
           pagination={{

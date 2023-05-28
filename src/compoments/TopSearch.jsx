@@ -14,8 +14,8 @@ function TopSearch() {
           className="group hover:bg-secondary duration-300 card bg-base-300 text-center p-4 rounded-3xl"
           key={movie.id}
         >
-          <div className=" card  pb-4 relative">
-            <h3 className="MovieName h-fit my-auto place-self-center align-middle text-xl group-hover:text-white  pb-4">
+          <div className=" card  pb-4 ">
+            <h3 className="MovieName  my-auto  text-xl group-hover:text-white pt-2 pb-4">
               {movie.title}
             </h3>
 
@@ -23,7 +23,7 @@ function TopSearch() {
               <img
                 src={`${process.env.REACT_APP_BASEIMGURL}/${movie.poster_path}`}
                 alt="img not found"
-                className="mx-auto align-center rounded-lg w-72 h-fit filter group-hover:brightness-50 duration-300 "
+                className="mx-auto align-center rounded-lg w-72 h-100 filter group-hover:brightness-50 duration-300 "
               />
             </figure>
             <div className="btn btn-base-100 absolute top-2/3 xl:inset-x-32 lg:inset-x-20 md:inset-x-28 sm:inset-x-64 xs:inset-x-28 opacity-0 group-hover:opacity-100 duration-300">
@@ -32,7 +32,7 @@ function TopSearch() {
               </Link>
             </div>
 
-            <div className="MovieRating text-base group-hover:text-white text-center flex mx-auto pt-3">
+            <div className="MovieRating text-base group-hover:text-white text-center flex mx-auto pt-5">
               Rating : {Math.round(movie.vote_average * 10) / 10}
               <span>
                 <svg
@@ -67,7 +67,7 @@ function TopSearch() {
     return (
       <div>
         {searched ? (
-          <div className="mx-auto grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6">
+          <div className="mx-auto grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-7">
             <SearchMovieList />
           </div>
         ) : (
@@ -79,12 +79,12 @@ function TopSearch() {
 
   return (
     <div>
-      <div className="text-center" id="searchBox">
-        <div>
+      <div className=" " id="searchBox">
+        <div className=" items-center justify-center flex mt-28 mb-4 ">
           <input
             className="input input-bordered max-w-sm mb-4 text-s ring-1 bg-transparent focus:ring-primary-focus hover:ring-primary-focus pl-10 pr-5  py-3 rounded-full w-full outline-none focus:ring-1"
             type="text"
-            placeholder="Search . . . . ."
+            placeholder="Search..."
             onChange={({ target }) => search(target.value)}
           />
         </div>
