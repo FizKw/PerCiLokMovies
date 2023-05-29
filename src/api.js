@@ -29,7 +29,7 @@ export const getGenre = async () => {
 }
 
 export const fetchMovieByGenre = async (genre_id, page) => {
-    const getGenre = await axios.get(`${baseUrl}/discover/movie?include_adult=true&include_video=true&language=en-US&page=${page}&sort_by=popularity.desc&with_genres=${genre_id}&api_key=${apiKey}`)
+    const getGenre = await axios.get(`${baseUrl}/discover/movie?include_adult=false&include_video=false&language=en-US&page=${page}&sort_by=popularity.desc&with_genres=${genre_id}&api_key=${apiKey}`)
     return getGenre.data.results
 }
 
@@ -46,4 +46,9 @@ export const fetchVideo = async (movie_id) => {
 export const fetchCast = async (movie_id) => {
     const getCast = await axios.get(`${baseUrl}/movie/${movie_id}/credits?language=en-US&api_key=${apiKey}`)
     return getCast.data.cast
+}
+
+export const fetchRecommendation = async (movie_id) => {
+    const getRecommendation = await axios.get(`${baseUrl}/movie/${movie_id}/recommendations?language=en-US&api_key=${apiKey}`)
+    return getRecommendation.data.results
 }

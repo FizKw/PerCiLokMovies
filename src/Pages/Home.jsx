@@ -1,20 +1,19 @@
-import React from "react"
-import TopSearch from "../compoments/TopSearch"
-import Navbar from "../navbar"
-import Footer from "../footer"
+import React from "react";
+import TopSearch from "../compoments/TopSearch";
+import Navbar from "../navbar";
+import Footer from "../footer";
 
-
-function Home () {
-    return (
-        
-    <div className="container mx-auto m-2">
+function Home() {
+  return (
+    <div>
+      <div className="container mx-auto mb-6">
         <Navbar />
-        
-        <TopSearch />
 
-        <Footer />
+        <TopSearch />
+      </div>
+      <Footer />
     </div>
-    )
+  );
 }
 
-export default Home
+export default Home;
