@@ -34,7 +34,7 @@ function Nothing() {
         
 
     
-      console.log({docMovie:docMovie})
+      //console.log({docMovie:docMovie})
     const DocMovies = () => {
         return docMovie.map((movie, index) => {
           return (
