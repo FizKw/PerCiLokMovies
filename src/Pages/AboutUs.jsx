@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 function AboutUs() {
   return (
     <div>
-      <div className="">
+      <div>
         <Navbar />
         <div className="flex flex-col min-h-screen">
           <div className="container flex-grow mx-auto">
