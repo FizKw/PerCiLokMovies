@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/PerCiLokMovies/static/css/main.850111f0.css",
-    "main.js": "/PerCiLokMovies/static/js/main.8540e253.js",
+    "main.js": "/PerCiLokMovies/static/js/main.34536622.js",
     "static/media/pinceng.jpg": "/PerCiLokMovies/static/media/pinceng.bcf0f15067c1579c7e97.jpg",
     "static/media/ig.png": "/PerCiLokMovies/static/media/ig.163f24529b56b3ebdddc.png",
     "static/media/hapis.jpg": "/PerCiLokMovies/static/media/hapis.9a42b0e30e4c3db7fa15.jpg",
@@ -10,10 +10,10 @@
     "static/media/percilok.png": "/PerCiLokMovies/static/media/percilok.c74a8afa9a7b004a500f.png",
     "index.html": "/PerCiLokMovies/index.html",
     "main.850111f0.css.map": "/PerCiLokMovies/static/css/main.850111f0.css.map",
-    "main.8540e253.js.map": "/PerCiLokMovies/static/js/main.8540e253.js.map"
+    "main.34536622.js.map": "/PerCiLokMovies/static/js/main.34536622.js.map"
   },
   "entrypoints": [
     "static/css/main.850111f0.css",
-    "static/js/main.8540e253.js"
+    "static/js/main.34536622.js"
   ]
 }
