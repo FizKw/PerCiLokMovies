@@ -6,10 +6,10 @@ function ResponNav() {
   return (
     <div className="navbar bg-base-300 py-5 flex-1 fixed top-0 left-0 right-0 z-50 sticky-nav">
       <div className="flex-1">
-        <Link to={`/PerCiLokMovies`}>
+        <Link to={`/`}>
           <img src={logo} alt="Percilok Logo" className="pl-4 w-14 rouded " />
         </Link>
-        <Link to={`/PerCiLokMovies`}>
+        <Link to={`/`}>
           <div
             className="hover:bg-none normal-case text-xl font-bold pl-3"
             href="/"
@@ -41,7 +41,7 @@ function ResponNav() {
           className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
         >
           <li>
-            <Link to={`/PerCiLokMovies`}>Home Page</Link>
+            <Link to={`/`}>Home Page</Link>
           </li>
           <li>
             <Link to={`/discover/topmovies`}>Discover</Link>
@@ -55,7 +55,7 @@ function ResponNav() {
       <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <Link to={`/PerCiLokMovies`}>Home Page</Link>
+            <Link to={`/`}>Home Page</Link>
           </li>
           <li>
             <Link to={`/discover/topmovies`}>Discover</Link>
