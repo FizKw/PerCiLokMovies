@@ -19,7 +19,7 @@ function Nothing() {
                   </span>
               </Link>
               itu dirahasiakan bukan di 
-              <Link to={`/PerCiLokMovies`}>
+              <Link to={`/`}>
                   <span>
                       {` Klik. `}
                   </span>
